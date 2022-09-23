@@ -1,13 +1,15 @@
 import React from "react";
 
-function Button(){
+function Button(props){
+
+    const handleSubmit = () => {
+        props.handleSubmitFromApp()
+    };
     return(
         <div>
-            <form>
-                <button type="button">
+            <button type="button" onClick={handleSubmit}> 
                     Cute Dogs!!
-                </button>
-            </form>
+            </button>
         </div>
     );
 };
